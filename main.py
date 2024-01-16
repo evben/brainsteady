@@ -1,10 +1,9 @@
-from bottle import route, post, install, template, request, run
+from bottle import route, install, template, run
 from bottle_sqlite import SQLitePlugin
 
-"""
-Connexion à la base de données SQLite
-"""
-install(SQLitePlugin(dbfile='classe.db'))
+
+# Connexion à la base de données SQLite
+install(SQLitePlugin(dbfile='brainsteady.db'))
 
 
 # Routes de l'application

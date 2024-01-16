@@ -7,6 +7,5 @@
 </head>
 <body>
     <h1>Brain Steady</h1>
-    <p>Hello world!</p>
 </body>
 </html>
