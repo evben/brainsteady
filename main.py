@@ -1,4 +1,4 @@
-from bottle import route, install, template, run
+from bottle import route, install, template, run, static_file
 from bottle_sqlite import SQLitePlugin
 
 
@@ -7,6 +7,12 @@ install(SQLitePlugin(dbfile='brainsteady.db'))
 
 
 # Routes de l'application
+@route('/assets/<filename:path>')
+def assets(filename):
+    """ Ressources graphiques (CSS, JS, images, musiques...) """
+    return static_file(filename, root='assets')
+
+
 @route('/')
 def index():
     """ Page d'accueil """
